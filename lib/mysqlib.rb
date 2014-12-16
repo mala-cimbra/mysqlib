@@ -31,6 +31,10 @@ module Mysqlib
       createQuery = "CREATE TABLE IF NOT EXIST #{table_name}()"
       self.query(createQuery)
     end
+
+    def drop(table_name)
+      self.query("DROP TABLE #{table_name}")
+    end
   end
 
 end
