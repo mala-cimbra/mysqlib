@@ -27,8 +27,9 @@ module Mysqlib
         )
     end
 
-    def create(table_name, )
-      self.query()
+    def create(table_name, column_hash)
+      createQuery = "CREATE TABLE IF NOT EXIST #{table_name}()"
+      self.query(createQuery)
     end
   end
 
