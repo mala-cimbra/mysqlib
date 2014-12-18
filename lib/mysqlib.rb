@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'mysql2'
 
 module Mysqlib
@@ -35,6 +36,7 @@ module Mysqlib
     def drop(table_name)
       self.query("DROP TABLE #{table_name}")
     end
-  end
 
+    
+  end
 end

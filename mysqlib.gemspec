@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Libreria MySQL"
   s.authors     = ["Ioma Taani"]
   s.email       = 'p@lnet'
-  s.files       = ["lib/mysqlib.rb"]
+  s.files       = ["lib/mysqlib.rb" ,"lib/mysqlib/version.rb"]
   s.homepage    =
     'githubqualcosa'
   s.license       = 'LGPL'
