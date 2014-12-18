@@ -37,6 +37,9 @@ module Mysqlib
       self.query("DROP TABLE #{table_name}")
     end
 
+    def select_all(table_name)
+      self.query("SELECT * FROM #{table_name}")
+    end
     
   end
 end
