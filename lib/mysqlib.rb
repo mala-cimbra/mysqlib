@@ -28,8 +28,19 @@ module Mysqlib
         )
     end
 
-    def create(table_name, column_hash)
+    def create(table_name, colonna_hash)
       createQuery = "CREATE TABLE IF NOT EXIST #{table_name}()"
+      self.query(createQuery)
+    end
+
+    def insert(table_name, campi_hash)
+      createQuery = "INSERT INTO #{table_name}(#{campi_hash.keys.join(", ")}) VALUES (#{campi_hash.values.join(", ")})"
+      self.query(createQuery)
+    end
+
+    def update(table_name, campo_update_hash, campo_select_hash)
+
+      createQuery = "UPDATE #{table_name} SET #{campo_update_hash.keys.join} = #{campo_update_hash.values.join} WHERE "
       self.query(createQuery)
     end
 
